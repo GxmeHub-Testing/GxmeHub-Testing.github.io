@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage with Navbar and Game Icons</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe); /* Light blue gradient */
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar Styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      margin: 0 1em;
+      padding: 0.7em 1.5em;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+      border: 1px solid rgba(255, 255, 255, 0.3); /* Add border for consistent look */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+      transform: scale(1.05); /* Add a slight zoom effect */
+    }
+
+    /* Game Icon Styles */
+    .game-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .game-icon {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      text-align: center;
+    }
+
+    .game-icon img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+
+    .game-icon:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h1>Welcome to My Website</h1>
+    <p>Click on a game icon to start playing!</p>
+  </div>
+
+  <!-- Game Icons -->
+  <div class="game-container">
+    <div class="game-icon" onclick="window.location.href='game1.html';">
+      <img src="game1-icon.png" alt="Game 1">
+    </div>
+    <div class="game-icon" onclick="window.location.href='game2.html';">
+      <img src="game2-icon.png" alt="Game 2">
+    </div>
+    <div class="game-icon" onclick="window.location.href='games/red-ball-4.html';">
+      <img src="https://play-lh.googleusercontent.com/_2RsmTzfPHkBeSmDVOzgKaSQGLNqYep9mRsuYErzIcQslzAt_0hQDgoP4wJCwvMJkizT" alt="Red-Ball-4">
+    </div>
+    <!-- Add more game icons as needed -->
+  </div>
+</body>
+</html>
